@@ -5,7 +5,7 @@ import xss from 'xss';
 const db = require('better-sqlite3')('meals.db');
 
 export async function getMeals(): Promise<IMeal[]> {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 500));
 
   return db.prepare('SELECT * FROM meals').all();
 }
