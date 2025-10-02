@@ -1,11 +1,12 @@
 export interface IMeal {
-  id: number;
-  title: string;
+  id: string;
   slug: string;
-  image: Iimage;
+  title: string;
+  image: string;
   summary: string;
-  creator: string;
   instructions: string;
+  creator: string;
+  creator_email: string;
 }
 export interface Iimage {
   name: string;
