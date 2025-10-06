@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Next Food Guide
+
+**PT-BR:** Este projeto foi desenvolvido inicialmente a partir de um curso da [Udemy](https://www.udemy.com/course/nextjs-react-the-complete-guide/), com o objetivo de aprendizado e prática dos conceitos apresentados.  
+Até o commit **`05ce349439ff89363e0add14888bfb2e63199ee0`**, o código foi implementado seguindo as instruções do curso.
+
+A partir desse ponto, todas as alterações, melhorias e novas funcionalidades foram desenvolvidas **por minha autoria**, com o intuito de **aperfeiçoar a aplicação**, aplicar **boas práticas** e explorar **recursos adicionais** além do conteúdo do curso.
+
+**EN:** This project was initially developed from a [Udemy](https://www.udemy.com/course/nextjs-react-the-complete-guide/) course, with the aim of learning and practicing the concepts presented. 
+
+learning and practicing the concepts presented.  
+Up to commit **`05ce349439ff89363e0add14888bfb2e63199ee0`**, the code was implemented following the course instructions.
+
+---
+## 🛠️ Melhorias e Implementações Próprias
+
+**PT-BR:**
+**EN:**
 
 ## Getting Started
 
