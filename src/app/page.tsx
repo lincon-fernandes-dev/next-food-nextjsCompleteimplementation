@@ -7,8 +7,8 @@ import ImageSlideshowComponent from '@/components/ImageSlideshow/imageSlideshow'
 export default function Home() {
   return (
     <>
-      <header className={classes.header}>
-        <div className={classes.slideshow}>
+      <header className='flex flex-col md:flex-row justify-center items-center md:gap-12 my-12 mx-auto w-[90%] max-w-6xl'>
+        <div className='w-[90%] h-96 md:w-[40rem]'>
           <ImageSlideshowComponent />
         </div>
         <div>
@@ -24,7 +24,7 @@ export default function Home() {
       </header>
       <main>
         <section className={classes.section}>
-          <h2>How it works</h2>
+          <h2 className='text-amber-50 mb-4'>How it works</h2>
           <p>
             NextLevel Food is a platform for foodies to share their favorite
             recipes with the world. It&apos;s a place to discover new dishes, and to
@@ -37,7 +37,7 @@ export default function Home() {
         </section>
 
         <section className={classes.section}>
-          <h2>Why NextLevel Food?</h2>
+          <h2 className='text-amber-50 mb-4'>Why NextLevel Food?</h2>
           <p>
             NextLevel Food is a platform for foodies to share their favorite
             recipes with the world. It&apos;s a place to discover new dishes, and to

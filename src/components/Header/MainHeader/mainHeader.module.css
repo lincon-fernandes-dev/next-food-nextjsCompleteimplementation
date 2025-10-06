@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 1rem;
+
 }
 
 @media (min-width: 768px) {
@@ -11,14 +12,33 @@
   }
 }
 
+.brand {
+  display: none;
+}
+@media (min-width: 768px) {
+  .brand {
+    display: inline;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #ddd6cb;
+  }
+}
+
 .nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1.5rem;
-  /* font-family: 'Montserrat', sans-serif; */
+  gap: 1rem;
   font-size: 1.25rem;
+  text-align: center;
+}
+.nav ul li a {
+  text-align: center;
+  display: inline-block;
 }
 
 .logo {
@@ -33,6 +53,7 @@
   letter-spacing: 0.15rem;
   text-transform: uppercase;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .logo img {
