@@ -1,5 +1,4 @@
 export interface IMeal {
-  id: string;
   slug: string;
   title: string;
   image: string;
@@ -7,10 +6,4 @@ export interface IMeal {
   instructions: string;
   creator: string;
   creator_email: string;
-}
-export interface Iimage {
-  name: string;
-  type: string;
-  size: number;
-  arrayBuffer: () => Promise<ArrayBuffer>;
 }

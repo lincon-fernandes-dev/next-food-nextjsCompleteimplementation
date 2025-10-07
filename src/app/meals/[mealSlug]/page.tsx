@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
-import { getMeal } from '@/lib/meals';
+import { getMeal } from '@/lib/meals/meals';
 import classes from './page.module.css';
 import { Metadata } from 'next';
-import Burger from '@/public/images/burger.jpg'
 type Props = {
   params: { mealSlug: string };
 }
@@ -34,10 +33,10 @@ export default async function MealDetailsPage({ params }: { params: { mealSlug: 
 
   return (
     <>
-      <header className={classes.header}>
-        <div className={classes.image}>
+      <section className={`${classes.header} 'flex flex-col md:flex md:flex-row mx-auto gap-12 px-8 py-4 justify-center items-center max-w-7xl`}>
+        <div className="relative w-10/12 max-w-xl h-80">
           <Image
-            src={Burger.src}
+            src={`/images/${meal.image}`}
             alt={meal.title}
             fill
           />
@@ -49,8 +48,8 @@ export default async function MealDetailsPage({ params }: { params: { mealSlug: 
           </p>
           <p className={classes.summary}>{meal.summary}</p>
         </div>
-      </header>
-      <main>
+      </section>
+      <main className='m-12'>
         <p
           className={classes.instructions}
           dangerouslySetInnerHTML={{

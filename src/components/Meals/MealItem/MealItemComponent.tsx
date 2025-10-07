@@ -2,17 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import classes from './mealItem.module.css';
-import { Iimage } from '@/domain/IMeal';
+import { IMeal } from '@/domain/interfaces.ts/IMeal';
 
-import BurguerImage from '@/public/images/burger.jpg';
-
-export default function MealItemComponent({ title, slug, image, summary, creator }:
+export default function MealItemComponent({ mealItem }:
   {
-    title: string;
-    slug: string;
-    image: Iimage;
-    summary: string;
-    creator: string;
+    mealItem: IMeal
   }
 ) {
   return (
@@ -20,20 +14,20 @@ export default function MealItemComponent({ title, slug, image, summary, creator
       <header>
         <div className={classes.image}>
           <Image
-            src={BurguerImage.src}
-            alt={title}
+            src={`/images/${mealItem.image}`}
+            alt={mealItem.title}
             fill
           />
         </div>
         <div className={classes.headerText}>
-          <h2>{title}</h2>
-          <p>by {creator}</p>
+          <h2>{mealItem.title}</h2>
+          <p>by {mealItem.creator}</p>
         </div>
       </header>
       <div className={classes.content}>
-        <p className={classes.summary}>{summary}</p>
+        <p className={classes.summary}>{mealItem.summary}</p>
         <div className={classes.actions}>
-          <Link href={`/meals/${slug}`}>View Details</Link>
+          <Link href={`/meals/${mealItem.slug}`}>View Details</Link>
         </div>
       </div>
     </article>

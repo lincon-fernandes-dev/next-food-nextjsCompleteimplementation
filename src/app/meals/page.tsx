@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 import classes from './page.module.css';
 import MealsGridComponent from '@/components/Meals/MealsGrid/MealsGridComponent';
-import { IMeal } from '@/domain/IMeal';
-import { getMeals } from '@/lib/meals';
+import { IMeal } from '@/domain/interfaces.ts/IMeal';
+import { getMeals } from '@/lib/meals/meals';
 
 export const metadata = {
   title: 'All Meals',
