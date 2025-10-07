@@ -25,12 +25,12 @@ export default function Home() {
       <main>
         <section className={classes.section}>
           <h2 className='text-amber-50 mb-4'>How it works</h2>
-          <p>
+          <p className='text-lg md:text-xl'>
             NextLevel Food is a platform for foodies to share their favorite
             recipes with the world. It&apos;s a place to discover new dishes, and to
             connect with other food lovers.
           </p>
-          <p>
+          <p className='text-lg md:text-xl'>
             NextLevel Food is a place to discover new dishes, and to connect
             with other food lovers.
           </p>
@@ -38,12 +38,12 @@ export default function Home() {
 
         <section className={classes.section}>
           <h2 className='text-amber-50 mb-4'>Why NextLevel Food?</h2>
-          <p>
+          <p className='text-lg md:text-xl'>
             NextLevel Food is a platform for foodies to share their favorite
             recipes with the world. It&apos;s a place to discover new dishes, and to
             connect with other food lovers.
           </p>
-          <p>
+          <p className='text-lg md:text-xl'>
             NextLevel Food is a place to discover new dishes, and to connect
             with other food lovers.
           </p>

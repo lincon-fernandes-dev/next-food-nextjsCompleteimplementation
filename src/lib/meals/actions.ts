@@ -8,6 +8,11 @@ import { MealEntity } from "@/domain/Entities/MealEntity";
 import { revalidatePath } from "next/cache";
 
 export async function shareMeal(prevState: any, formData: FormData) { // eslint-disable-line
+  if(!verifyAmbient()){
+    const formResponse = { message: "", error: "notAllowed" };
+    return formResponse;
+  }
+
   const title = formData.get("title") as string;
   const summary = formData.get("summary") as string;
   const instructions = formData.get("instructions") as string;
@@ -74,4 +79,11 @@ function nameImagePath(imageFile: File, slug: string): string {
   const randomString = Math.random().toString(36).substring(2, 8);
   const fileExtension = imageFile.type.split("/")[1] || "jpg";
   return `meal-${slug}-${randomString}.${fileExtension}`;
+}
+
+function verifyAmbient(): boolean{
+  if(process.env.IS_PUBLIC_ENVIROMENT){
+    return false;
+  }
+  return true;
 }
