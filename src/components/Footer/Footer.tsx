@@ -2,8 +2,6 @@ import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function FooterComponent() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="text-gray-300 py-12 px-4 sm:px-8 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto">

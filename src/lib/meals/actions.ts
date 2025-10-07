@@ -7,7 +7,7 @@ import { IMeal } from "@/domain/interfaces.ts/IMeal";
 import { MealEntity } from "@/domain/Entities/MealEntity";
 import { revalidatePath } from "next/cache";
 
-export async function shareMeal(prevState: any, formData: FormData) {
+export async function shareMeal(prevState: any, formData: FormData) { // eslint-disable-line
   const title = formData.get("title") as string;
   const summary = formData.get("summary") as string;
   const instructions = formData.get("instructions") as string;

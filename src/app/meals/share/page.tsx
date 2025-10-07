@@ -15,7 +15,7 @@ export default function ShareMealPage() {
       if (
         typeof result === 'object' &&
         result !== null &&
-        typeof (result as any).message === 'string'
+        typeof (result as any).message === 'string' // eslint-disable-line
       ) {
         return result as State;
       }

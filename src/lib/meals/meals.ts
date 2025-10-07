@@ -1,9 +1,8 @@
 import { MealEntity } from '@/domain/Entities/MealEntity';
 import { IMeal } from '@/domain/interfaces.ts/IMeal';
-import slugify from 'slugify';
 import xss from 'xss';
 
-const db = require('better-sqlite3')('meals.db');
+const db = require('better-sqlite3')('meals.db'); // eslint-disable-line
 
 export async function getMeals(): Promise<IMeal[]> {
   await new Promise((resolve) => setTimeout(resolve, 500));
@@ -32,13 +31,11 @@ export async function saveMeal(meal: MealEntity) {
         @slug
       )`);
 
-      var json = meal.toJSON();
-    // Remove a transação desnecessária
+    const json = meal.toJSON();
     const result = insert.run(json);
     return result;
   } catch(e) {
     console.error('Error saving meal:', e);
-    throw e; // Propague o erro para tratamento no chamador
+    throw e;
   }
 }
-//teste hamburguer
